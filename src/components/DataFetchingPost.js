@@ -7,12 +7,15 @@ function DataFetchingPost() {
 		fetch('https://jsonplaceholder.typicode.com/posts', {
 			method: 'POST',
 			body: JSON.stringify({
-			  title: 'foo',
-			  body: 'bar',
-			  userId: 1,
+				userId: 12,
+				id: 201,
+				title: "Samual",
+				completed: false,
 			}),
 			headers: {
-			  'Content-type': 'application/json; charset=UTF-8',
+			  'Content-type': 'text/plain',
+			  'access-control-allow-origin': '*',
+			  'vary': 'Accept-Encoding'
 			},
 		  })
 		.then((response) => response.json())
@@ -27,4 +30,4 @@ function DataFetchingPost() {
 	)
 }
 
-export default DataFetchingPost
+export default DataFetchingPost;
